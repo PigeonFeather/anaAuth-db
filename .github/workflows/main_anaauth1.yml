@@ -61,4 +61,4 @@ jobs:
           app-name: 'anaAuth1'
           slot-name: 'Production'
           publish-profile: ${{ secrets.AZUREAPPSERVICE_PUBLISHPROFILE_EE50FA3718754774BFF4011FBDBF5655 }}
-          package: .
+          package: release.zip
