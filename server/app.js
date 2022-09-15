@@ -8,9 +8,12 @@ const jwt = require("jsonwebtoken");
 const dbConnect = require("./db/dbConnect");
 const User = require("./db/userModel");
 const auth = require("./auth");
+const cors = require('cors');
 
 // execute database connection
 dbConnect();
+
+app.use(cors());
 
 // Curb Cores Error by adding a header here
 app.use((req, res, next) => {
