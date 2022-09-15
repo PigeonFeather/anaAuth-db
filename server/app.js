@@ -30,10 +30,18 @@ app.use((req, res, next) => {
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
 
-app.get("/", (request, response, next) => {
-  response.json({ message: "Hey! This is your server response!" });
+// added code from Sogutt
+app.use(express.static('/build'));
+
+app.get("*", (request, response, next) => {
+  response.sendFile(path.resolve(__dirname, "build", "index.html"));
   next();
 });
+
+// app.get("/", (request, response, next) => {
+//   response.json({ message: "Hey! This is your server response!" });
+//   next();
+// });
 
 // register endpoint
 app.post("/register", (request, response) => {
