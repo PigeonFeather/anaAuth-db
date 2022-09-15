@@ -33,10 +33,10 @@ app.use(bodyParser.urlencoded({ extended: true }));
 // added code from Sogutt
 app.use(express.static('/build'));
 
-app.get("*", (request, response, next) => {
-  response.sendFile(path.resolve(__dirname, "build", "index.html"));
-  next();
-});
+// app.get("*", (request, response, next) => {
+//   response.sendFile(path.resolve(__dirname, "build", "index.html"));
+//   next();
+// });
 
 // app.get("/", (request, response, next) => {
 //   response.json({ message: "Hey! This is your server response!" });
@@ -146,6 +146,11 @@ app.get("/free-endpoint", (request, response) => {
 // authentication endpoint
 app.get("/auth-endpoint", auth, (request, response) => {
   response.send({ message: "You are authorized to access me" });
+});
+
+app.get("*", (request, response, next) => {
+  response.sendFile(path.resolve(__dirname, "build", "index.html"));
+  next();
 });
 
 module.exports = app;
