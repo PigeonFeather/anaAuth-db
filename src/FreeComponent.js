@@ -9,7 +9,8 @@ export default function FreeComponent() {
         // set configuration for the API call here
         const configuration = {
             method: "get",
-            url: "http://localhost:3000/free",
+            url: "https://anaauth1-server.mongo.cosmos.azure.com:443/free",
+            // url: "http://localhost:3000/free",
         };
 
         // make the API call
