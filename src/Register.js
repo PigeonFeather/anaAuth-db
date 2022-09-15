@@ -15,7 +15,8 @@ export default function Register() {
     // set configurations
     const configuration = {
       method: "post",
-      url: "http://localhost:3000/register",
+      url: "https://anaauth1-server.mongo.cosmos.azure.com:443/register",
+      // url: "http://localhost:3000/register",
       // url: "https://8cbf0c2a-0ee0-4-231-b9ee.mongo.cosmos.azure.com:443/register",
       //  url: "https://nodejs-mongodb-auth-app.herokuapp.com/register",
       data: {

@@ -18,7 +18,8 @@ export default function Login() {
     // set configuration
     const configuration = {
       method: "post",
-      url: "http://localhost:3000/login",
+      url: "https://anaauth1-server.mongo.cosmos.azure.com:443/login",
+      // url: "http://localhost:3000/login",
       data: {
         email,
         password,
