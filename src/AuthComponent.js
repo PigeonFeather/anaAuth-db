@@ -14,7 +14,7 @@ export default function AuthComponent() {
     // set configurations for the API call here
     const configuration = {
       method: "get",
-      url: "https://anaauth1.azurewebsites.net/auth",
+      url: "https://anaauth1.azurewebsites.net/auth-endpoint",
       // url: "http://localhost:3000/auth",
       headers: {
         Authorization: `Bearer ${token}`,
